@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML COMPONENTES</title>
+</head>
+<body>
+    
+<h1>Header 1</h1>
+<h2>Header 2</h2>
+<h3>Header 3</h3>
+<h4>Header 4</h4>
+<h5>Header 5</h5>
+<h6>Header 6</h6>
+
+<hr />
+
+<p>Test here</p>
+
+    <!--Creating links to other HTML page -->
+    <!--_blank: It opens the link in a new window.-->
+    <!--_self: It opens the linked document in the same frame.-->
+    <!--_parent: It opens the linked document in the parent frameset.-->
+    <!--_top: It opens the linked document in the full body of the window.-->
+    <!--framename: It opens the linked document in the named frame-->
+
+    <!--https://www.w3schools.com/tags/att_a_target.asp -->
+
+<a href="http://www.google.com">Google</a>
+<a href="http://www.lexicon.se" target="_blank">Lexicon</a>
+
+<div>
+    <img src="IMG/img.png" width="500">
+</div>
+
+        <!--Formatting Text in HTML-->
+        <p>This is <b>bold text</b>.</p>
+        <p>This is <strong>strongly important text</strong>.</p>
+        <p>This is <i>italic text</i>.</p>
+        <p>This is <em>emphasized text</em>.</p>
+        <p>This is <mark>highlighted text</mark> .</p>
+        <p>This is <code>computer code</code>.</p>
+        <p>This is <small>smaller text</small>.</p>
+        <p>This is <sub>subscript</sub> and <sup>superscript</sup> text.</p>
+        <p>This is <del>deleted text</del>.</p>
+        <p>This is <ins>inserted text</ins>.</p>
+
+        <hr/>
+
+        <ul> <!-- unorderd list with list items -->
+            <li>List item 1</li>
+            <li>List item 2</li>
+            <li>List item 3</li>
+            <li>List item 4</li>
+        </ul>
+
+        <ol> <!-- orderd list with list items -->
+            <li>List item</li>
+            <li>List item</li>
+            <li>List item</li>
+            <li>List item</li>
+        </ol>
+
+        <table border="1" cellpadding="5">
+            <thead>
+                <tr>
+                    <td>Id</td>
+                    <td>Name</td>
+                    <td>Email</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Simon</td>
+                    <td>simon@lexicon.se</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Simone</td>
+                    <td>simone@lexicon.se</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br/>
+
+        <fieldset>
+            <legend>Register Form</legend>
+            <form>
+
+                <label for="firstName">FirstName</label>
+                <input type="text" name="firstName" id="firstName">
+                <br/>
+    
+                <label for="lastName">LastName</label>
+                <input type="text" name="lastName" id="lastName">
+                <br/>
+
+                <label for="username">Username:</label>
+                <input type="text" name="username" id="username">
+                <br/>
+
+                <label for="pwd">Password:</label>
+                <input type="password" name="user-password" id="pwd">
+                <br/>
+
+                <fieldset>
+                    <legend>Gender</legend>
+                    <input type="radio" name="gender" id="male">
+                    <label for="male">Male</label>
+        
+                    <input type="radio" name="gender" id="female">
+                    <label for="female">Female</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Hobbies</legend>
+
+                    <input type="checkbox" name="hobby" id="sport" value="sport">
+                    <label for="sport">Sports</label>
+                    <input type="checkbox" name="hobby" id="music" value="music">
+                    <label for="music">Music</label>
+                    <input type="checkbox" name="hobby" id="read" value="read">
+                    <label for="read">Reading</label>
+                    <input type="checkbox" name="hobby" id="programming" value="programming">
+                    <label for="programming">Developing Apps</label>
+                </fieldset>
+
+                <select>
+                    <optgroup label="Sports Cars">
+                        <option value="ferrari">Ferrari</option>
+                        <option value="lamborghini">Lamborghini</option>
+                    </optgroup>
+
+                    <optgroup label="Luxury cars">
+                        <option value="bentley">Bentley</option>
+                        <option value="mercedes">Mercedes</option>
+
+                    </optgroup>
+                </select>
+
+            </form>
+        </fieldset>
+
+</body>
+</html>
