@@ -9,7 +9,7 @@ body {
     'main-content'
     'footer';
   grid-gap: 10px;
-  background-color: #F1EDEE;
+  background-color: rgb(241, 237, 238);
   padding: 10px;
 }
 
