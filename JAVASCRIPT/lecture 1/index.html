@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Lecture 1</title>
+</head>
+<body>
+
+    <div id="demo">Some Content!!!!</div>
+
+    <br>
+    <br>
+<!--
+    <script>
+ 
+        document.write("Hello!");
+        
+        document.getElementById("demo").innerHTML = "Hello Group 40!";
+
+        console.log("Message in Console!!!!");
+
+       // alert("Alerts!");
+      
+    </script>
+-->
+    
+    <button 
+    onclick="document.getElementById('demo').innerHTML = Date()"
+    >
+    Click to display time and Date
+    </button>
+
+    <br>  
+
+    <button
+        onclick=" document.getElementById('demo').style.color = 'red' "
+    >
+        Click to change font Color
+    </button>
+
+    <script src="index.js"></script>
+
+</body>
+</html>
