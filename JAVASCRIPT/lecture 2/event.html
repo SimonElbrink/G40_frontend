@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--https://www.bootstrapcdn.com/-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <title>Event Example</title>
+</head>
+<body>
+    <div class="container mt-5">
+
+        <!--Task 1 start-->
+        <!--Add Functionality to the buttons.
+            "show" should display an message in the div.
+            "hide" should hide it again. -->
+        
+        <div id="message"></div>
+        <button class="btn btn-primary" onclick="displayMessage(true)">Show</button>
+        <button class="btn btn-danger" onclick="displayMessage(false)">Hide</button>
+        <script>
+
+            const ourMessage = "Hello this is a message.";
+            function displayMessage(input){
+                if(input){
+                    document.getElementById("message").hidden = false;
+                    document.getElementById("message").innerHTML = ourMessage;
+                }else{
+                    document.getElementById("message").hidden = true;
+                    document.getElementById("message").innerHTML = "";
+                }
+                
+            }
+        </script>
+        <hr/>
+
+        <!--End of Task 1-->
+
+        <!--Task 2 start-->
+        <!--Fill the table with data from an Array.
+            Make sure you have a eventlistener to populate the Table.-->
+        <div class="card">
+            <div class="card-header bg-dark text-white">Show Data</div>
+            <div id="data" class="card-body">
+                <table id="dataTable" class="table table-striped">
+                    <thead>
+                        <tr>
+                            <td>Id</td>
+                            <td>Name</td>
+                        </tr>
+                    </thead>
+                    
+                </table>
+
+                <script></script>
+                <hr/>
+                <!--End of Task 2-->
+
+                <!--Start of Task 3-->
+                <div class="card">
+                    <div class="card-header bg-info text-white">Form</div>
+                    <div class="card-body">
+                        <form name="myForm" class="form-control">
+                            <div class="row">
+                                <div class="col-6">
+                                    <input type="text" class="form-control" id="emailId" name="emailName" placeholder="Enter Email" />
+                                </div>
+                                <div class="col-2">
+                                    <button type="button" class="btn btn-success" >Submit</button>
+                                </div>
+                                <div class="col-2" id="errorMessage"></div>
+                            </div>
+                        </form>
+                    </div>
+                    <script>
+                        function handleClick(){
+
+                        }
+
+                        function validateEmail(){
+                            const regexForEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+                            
+                        }
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
