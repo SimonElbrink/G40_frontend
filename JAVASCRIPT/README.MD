@@ -11,13 +11,22 @@
 - Comments
 - DataTypes
 - Variable
-- ES6
+- EcmaScript6 == JavaScript
     - Template Literals
     - let & const
     - Block Scope
     - String methods
-    - Arrow Functions
-    - Destructuring
+    - Arrow Functions =>
 - .map
-- Operators
+- Operators  (===  !==)
 - Functions
+
+### Lecture 2
+
+- Arrays
+    - sort(), reverse(), push(), pop(), join(), splice()
+    - Delete Function
+
+- Aonoymous Objects
+- CRUD for the Objects
+- Event!
