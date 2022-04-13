@@ -1,13 +1,11 @@
 //document.getElementById("demo").innerHTML = "Hello Group 40!";
 
+// Data Types
+// Numbers, String, Boolean, Objects
 var a = 10;
 var b  = 5.50;
 var c = a + b;
-
-console.log('value of ' + a + '+' + b + '=' + c);
-
-// ``Backticks can make string message easier
-console.log(`Value of ${a} + ${b} = ${c}`)
+var d = '10';
 
 var firstName = "Simon";
 var sentence = 'hello world';
@@ -15,8 +13,18 @@ var sentence = 'hello world';
 var lastName = null;
 var isValid = true;
 
+
+//String Concating
+console.log('value of ' + a + '+' + b + '=' + c);
+
+//Template Literals can make string messages easier
+console.log(`Value of ${a} + ${b} = ${c}`)  // NOTE! - Backticks  ``
+
 console.log(lastName);
 console.log(isValid);
+
+console.log(a == d);// Value check
+console.log(a === d); // Value and Type check
 
 
 // JavaScript Object
@@ -37,7 +45,8 @@ var mehrdad = {
 mehrdad.title = "Teacher, Developer" // Updating a property
 delete mehrdad.id; // Delete a Propererty
 
-simon["city"] = "Växjö"; // added a property
+simon["city"] = "Växjö"; // added a property ES3-5
+simon.title = "Teacher"; // added property ES6
 
 
 console.log(simon);
@@ -70,16 +79,17 @@ display("Hello");
 
 
 
-// String
-
+// String Method
 let fn ='Simon';
 
 console.log("Starts with F: " + fn.startsWith('F'));
-
-console.log(fn.length)
 console.log(fn.endsWith('n'))
 
 
+console.log(fn.length)
+
+
+//Arrow functions
 
 const years = [1990, 1997, 2000, 1960, 1200];
 
@@ -94,12 +104,4 @@ ages = years.map(year => 2022 - year);
 console.log(ages);
 
 
-var a1 = 5; // value assigning
-var b1 = "5";
-
-console.log(a1 == b1);// Value check
-console.log(a1 === b1); // Value and Type check
-
-
 console.log("end of lecture!");
-
