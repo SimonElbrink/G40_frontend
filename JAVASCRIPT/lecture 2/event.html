@@ -12,7 +12,7 @@
 
     <title>Event Example</title>
 </head>
-<body>
+<body onload="displayData()">
     <div class="container mt-5">
 
         <!--Task 1 start-->
@@ -57,11 +57,55 @@
                     
                 </table>
 
-                <script></script>
+                <script>
+
+                    function displayData(){
+                        const nameList = [
+                        {id: 1, name: "Simon Elbrink"},
+                        {id: 2, name: "Mehrdad Javan"},
+                        {id: 3, name: "Ulf Bengtsson"}
+                    ];
+
+
+                    // let tableRows = 
+                    // `                    
+                    //     <tr>
+                    //         <td>${nameList[0].id}</td>
+                    //         <td>${nameList[0].name}</td>
+                    //     </tr>
+                    //     <tr>
+                    //         <td>${nameList[1].id}</td>
+                    //         <td>${nameList[1].name}</td>
+                    //     </tr>
+                    // `
+
+                    const tableRows = nameList.map((data) => {
+                        const row = 
+                        `<tr id="${data.id}">
+                            <td>${data.id}</td>
+                            <td>${data.name}</td>
+                        </tr>`;
+
+                        return row;
+                    });
+
+                    const tbody = document.createElement("tbody");
+                    tbody.innerHTML = tableRows;
+
+
+                    const table = document.getElementById("dataTable");
+                    table.appendChild(tbody);
+                    }
+
+                </script>
                 <hr/>
                 <!--End of Task 2-->
 
                 <!--Start of Task 3-->
+                    <!-- Validate The Email with help of the RegEx.
+                        If it's valid display a green and happy message
+                        if it's not valid display an red unhappy message
+                    -->
                 <div class="card">
                     <div class="card-header bg-info text-white">Form</div>
                     <div class="card-body">
@@ -71,7 +115,7 @@
                                     <input type="text" class="form-control" id="emailId" name="emailName" placeholder="Enter Email" />
                                 </div>
                                 <div class="col-2">
-                                    <button type="button" class="btn btn-success" >Submit</button>
+                                    <button type="button" class="btn btn-success" onclick="handleClick()" >Submit</button>
                                 </div>
                                 <div class="col-2" id="errorMessage"></div>
                             </div>
@@ -79,12 +123,30 @@
                     </div>
                     <script>
                         function handleClick(){
+                            const isValid = validateEmail();
+                            if(isValid){
+                                document.getElementById("errorMessage").innerHTML = "Email Is Valid! :D";
+                                document.getElementById("errorMessage").style.color = "green";
+                            }else{
+                                document.getElementById("errorMessage").innerHTML = "Email Is NOT Valid! :S";
+                                document.getElementById("errorMessage").style.color = "red";
+                            }
 
                         }
 
                         function validateEmail(){
+
+                            let email = document.getElementById("emailId").value;
+
+                            console.log("EMAIL: " + email);
+
                             const regexForEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-                            
+
+                            if(regexForEmail.test(email)){
+                                return true;
+                            }else{
+                                return false;
+                            }
                         }
                     </script>
                 </div>

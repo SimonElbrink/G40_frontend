@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <p>Select a Car from the list!</p>
+    <select name="cars" id="mySelectionOfCars" onchange="carSelection()">
+        <option value="" disabled>Select a Car</option>
+        <option value="Volvo v40">Volvo v40</option>
+        <option value="Volvo v50">Volvo v50</option>
+        <option value="Volvo v60">Volvo v60</option>
+        <option value="Volvo v70">Volvo v70</option>
+    </select>
+    
+    <p id="displayCar" >Display Car here!</p>
+
+    <script>
+
+    function carSelection(){
+        let value = document.getElementById("mySelectionOfCars").value
+
+        console.log(value);
+
+        document.getElementById("displayCar"). innerHTML = "SelectedCar : " + value;
+}
+    </script>
+
+
+
+
+    
+</body>
+</html>
